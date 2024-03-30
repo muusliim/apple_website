@@ -21,6 +21,7 @@ import right from "/assets/images/right.svg";
 import replay from "/assets/images/replay.svg";
 import play from "/assets/images/play.svg";
 import pause from "/assets/images/pause.svg";
+import bouncingCircles from "/assets/images/bouncingCircles.svg";
 
 import yellow from "/assets/images/yellow.jpg";
 import blue from "/assets/images/blue.jpg";
@@ -48,6 +49,7 @@ export const rightImg = right;
 export const replayImg = replay;
 export const playImg = play;
 export const pauseImg = pause;
+export const bouncing = bouncingCircles;
 
 export const yellowImg = yellow;
 export const blueImg = blue;

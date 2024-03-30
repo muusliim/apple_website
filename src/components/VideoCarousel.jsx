@@ -28,7 +28,7 @@ const VideoCarousel = () => {
 		gsap.to("#slider", {
 			transform: `translateX(${-100 * videoId}%)`,
 			duration: 2,
-			ease: "power2.inOut", 
+			ease: "power2.inOut",
 		});
 
 		// video animation для воспроизведения
@@ -57,22 +57,16 @@ const VideoCarousel = () => {
 					// прогресс видео
 					const progress = Math.ceil(anim.progress() * 100);
 
-						// изменения ширины индикатора
-						gsap.to(videoDivRef.current[videoId], {
-							width:
-								window.innerWidth < 760
-									? "10vw" // mobile
-									: window.innerWidth < 1200
-									? "10vw" // tablet
-									: "4vw", // laptop
-						});
+					// изменения ширины индикатора
+					gsap.to(videoDivRef.current[videoId], {
+						width: window.innerWidth < 1200 ? "10vw" : "4vw",
+					});
 
-						// 
-						gsap.to(span[videoId], {
-							width: `${progress}%`,
-							backgroundColor: "white",
-						});
-					
+					// изменения цвета индикатора
+					gsap.to(span[videoId], {
+						width: `${progress}%`,
+						backgroundColor: "white",
+					}); 
 				},
 
 				// завершение анимации
@@ -196,7 +190,6 @@ const VideoCarousel = () => {
 							key={i}
 							className="mx-2 w-3 h-3 bg-gray-200 rounded-full relative"
 							ref={(el) => (videoDivRef.current[i] = el)}
-
 						>
 							<span
 								className="absolute h-full w-full rounded-full"
