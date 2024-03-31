@@ -15,18 +15,31 @@ const Chip = () => {
 			opacity: 0,
 			duration: 2,
 			scale: 2,
-			ease: "power3.inOut",
+			ease: "power2.inOut",
 			scrollTrigger: {
 				trigger: "#chip",
-				start: "20% bottom",
+				start: "top 85%",
+				end: "bottom 10%",
+				scrub: 4,
 			},
 		});
-        animateWithGsap('.g_fadeIn', {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: 'power2.inOut'
-          })
+		animateWithGsap(
+			".g_fadeIn",
+			{
+				opacity: 1,
+				scale: 1,
+				rotate: 0,
+				y: 0,
+				x: 0,
+				ease: "power2.inOut",
+				stagger: 0.3,
+			},
+			{
+				start: "top 90%",
+				end: "bottom 80%",
+				scrub: 3,
+			}
+		);
 	}, []);
 
 	return (
@@ -60,7 +73,7 @@ const Chip = () => {
 								autoPlay
 								preload="none"
 								ref={videoRef}
-                                loop
+								loop
 								className="pointer-events-none"
 							>
 								<source src={frameVideo} type="video/mp4" />
