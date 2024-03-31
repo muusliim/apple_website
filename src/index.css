@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth
 }
 
 
@@ -19,12 +20,12 @@ body {
   user-select: none;
 }
 
-main {
-  touch-action: pan-y;
-  overflow-y: auto;
-}
-
-
+@media screen and (max-width: 768px) {
+  main {
+    touch-action: pan-y;
+    overflow-y: auto;
+  }
+} 
 
 .canvas {
   touch-action: auto!important;
@@ -107,7 +108,11 @@ main {
   }
 
   .hiw-video {
-    @apply absolute w-[95%] h-[90%] rounded-[56px] overflow-hidden
+    @apply absolute w-[95%] h-[90%] rounded-[56px] overflow-hidden 
+  }
+
+  .hiw-video-phone {
+    @apply absolute w-[87%] h-[84%] rounded-[57px] overflow-hidden scale-[1.14]
   }
 
   .hiw-text-container {
