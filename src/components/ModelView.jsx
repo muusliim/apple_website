@@ -1,9 +1,4 @@
-import {
-	Html,
-	OrbitControls,
-	PerspectiveCamera,
-	View,
-} from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera, View } from "@react-three/drei";
 import Lights from "./Lights";
 import * as THREE from "three";
 import { Suspense } from "react";
